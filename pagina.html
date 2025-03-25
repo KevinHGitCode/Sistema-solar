@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema solar y sus especificaciones</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sistema Solar</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#sol">Sol</a></li>
+        <li><a href="#mercurio">Mercurio</a></li>
+        <li><a href="#venus">Venus</a></li>
+        <li><a href="#tierra">Tierra</a></li>
+        <li><a href="#marte">Marte</a></li>
+        <li><a href="#jupiter">Júpiter</a></li>
+        <li><a href="#saturno">Saturno</a></li>
+        <li><a href="#urano">Urano</a></li>
+        <li><a href="#neptuno">Neptuno</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="sol">
+        <h2>Sol</h2>
+        <img
+          src="https://content.nationalgeographic.com.es/medio/2022/08/07/el-sol_e26b22b0_1200x720.jpg"
+          alt="Sol"
+        />
+        <button onclick="showModal('sol')">Detalles</button>
+      </section>
+      <section id="mercurio">
+        <h2>Mercurio</h2>
+        <img
+          src="https://content.nationalgeographic.com.es/medio/2022/07/31/el-planeta-mercurio_c7bafef8_1280x720.jpg"
+          alt="Mercurio"
+        />
+        <button onclick="showModal('mercurio')">Detalles</button>
+      </section>
+      <section id="venus">
+        <h2>Venus</h2>
+        <img
+          src="https://content.nationalgeographic.com.es/medio/2022/07/31/el-planeta-venus_de3a3995_1280x1280.jpg"
+          alt="Venus"
+        />
+        <button onclick="showModal('venus')">Detalles</button>
+      </section>
+      <section id="tierra">
+        <h2>Tierra</h2>
+        <img
+          src="https://static.nationalgeographic.es/files/styles/image_3200/public/940.webp"
+          alt="Tierra"
+        />
+        <button onclick="showModal('tierra')">Detalles</button>
+      </section>
+      <section id="marte">
+        <h2>Marte</h2>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/1200px-OSIRIS_Mars_true_color.jpg"
+          alt="Marte"
+        />
+        <button onclick="showModal('marte')">Detalles</button>
+      </section>
+      <section id="jupiter">
+        <h2>Júpiter</h2>
+        <img
+          src="https://content.nationalgeographic.com.es/medio/2022/08/02/el-planeta-jupiter_b107cb4f_1280x1280.jpg"
+          alt="Júpiter"
+        />
+        <button onclick="showModal('jupiter')">Detalles</button>
+      </section>
+      <section id="saturno">
+        <h2>Saturno</h2>
+        <img
+          src="https://concepto.de/wp-content/uploads/2020/03/saturno-e1585016761130.jpg"
+          alt="Saturno"
+        />
+        <button onclick="showModal('saturno')">Detalles</button>
+      </section>
+      <section id="urano">
+        <h2>Urano</h2>
+        <img
+          src="https://concepto.de/wp-content/uploads/2022/08/urano-e1661544673561.jpg"
+          alt="Urano"
+        />
+        
+        <button onclick="showModal('urano')">Detalles</button>
+      </section>
+      <section id="neptuno">
+        <h2>Neptuno</h2>
+        <img
+          src="https://content.nationalgeographic.com.es/medio/2022/08/03/el-planeta-neptuno_bfb396f8_1280x1278.jpg"
+          alt="Neptuno"
+        />
+        <button onclick="showModal('neptuno')">Detalles</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Sistema Solar</p>
+      <p>
+        Autores: Kevin Diaz, Jorge Velasquez, Liz Martinez, Luis Zapata, Carmen
+        Gomez, Erick Sierra
+      </p>
+    </footer>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <button onclick="closeModal()">Cerrar</button>
+      </div>
+    </div>
+
+    <script>
+      const descriptions = {
+        sol: "<b>Composición:</b> Principalmente hidrógeno (75%) y helio (24%).<br><br><b>Tamaño:</b> Diámetro de 1.4 millones de km, 109 veces el de la Tierra.<br><br><b>Temperatura:</b> 15 millones de °C en el núcleo y 5,500°C en la superficie.<br><br><b>Energía:</b> Genera energía por fusión nuclear.<br><br><b>Gravedad:</b> 28 veces la de la Tierra.<br><br><b>Edad:</b> Aproximadamente 4.6 mil millones de años.<br><br><b>Ciclo Solar:</b> Ciclo de actividad de 11 años.<br><br><b>Influencia:</b> Fuente de energía para la vida en la Tierra.",
+        mercurio:
+          "<b>Composición:</b> Núcleo metálico y corteza rocosa.<br><br><b>Gravedad:</b> 38% de la gravedad terrestre.<br><br><b>Temperatura:</b> Extremas, de más de 400°C de día y -180°C de noche.<br><br><b>Órbita y Rotación:</b> Un año dura 88 días y un día dura 59 días terrestres.<br><br><b>Atmósfera:</b> Muy fina, compuesta de oxígeno, sodio, hidrógeno y helio.<br><br><b>Superficie:</b> Llena de cráteres, similar a la Luna.<br><br><b>Lunas:</b> No tiene lunas.",
+        venus:
+          "<b>Composición:</b> Planeta rocoso.<br><br><b>Gravedad:</b> 0.9 veces la de la Tierra.<br><br><b>Temperatura:</b> Promedio de 462°C debido al efecto invernadero.<br><br><b>Órbita y Rotación:</b> Año de 225 días terrestres, día de 243 días terrestres, y rotación retrógrada.<br><br><b>Atmósfera:</b> Densa, compuesta principalmente de dióxido de carbono y nubes de ácido sulfúrico.<br><br><b>Superficie:</b> Volcánica, con alta presión atmosférica.<br><br><b>Lunas:</b> No tiene lunas.",
+        tierra:
+          "<b>Composición:</b> Núcleo metálico, manto rocoso y corteza terrestre sólida.<br><br><b>Atmósfera:</b> Compuesta principalmente de nitrógeno (78%) y oxígeno (21%).<br><br><b>Gravedad:</b> 9.81 m/s², lo que mantiene el agua y la atmósfera.<br><br><b>Temperatura:</b> Promedio de 15 °C, con variaciones según ubicación y estación.<br><br><b>Órbita y Rotación:</b> Orbita el Sol en 365 días y rota sobre su eje en 24 horas.<br><br><b>Hidrosfera:</b> 71% de la superficie está cubierta por agua.<br><br><b>Biósfera:</b> Alberga una gran diversidad de vida en todos los ambientes.<br><br><b>Campo Magnético:</b> Protege de la radiación solar dañina.<br><br><b>Tectónica de Placas:</b> Las placas tectónicas causan terremotos y volcanes.<br><br><b>Luna:</b> Influye en las mareas y estabiliza el clima.",
+        marte:
+          "<b>Composición:</b> Atmósfera delgada de dióxido de carbono y superficie rocosa con antiguos lechos de agua.<br><br><b>Gravedad:</b> 38% de la gravedad terrestre.<br><br><b>Temperatura:</b> Promedio de -60°C, con variaciones extremas.<br><br><b>Órbita y Rotación:</b> Año marciano de 687 días; día marciano de 24,6 horas.<br><br><b>Lunas:</b> Tiene dos lunas pequeñas, Fobos y Deimos.<br><br><b>Superficie:</b> Cañones, montañas (Olympus Mons) y evidencia de agua pasada.<br><br><b>Atmósfera:</b> Muy delgada y sin oxígeno, lo que no permite vida como la conocemos.<br><br><b>Exploración:</b> Ha sido visitado por rovers como Curiosity y Perseverance en busca de agua y vida.",
+        jupiter:
+          "<b>Composición:</b> Gigante gaseoso, principalmente de hidrógeno y helio.<br><br><b>Gravedad:</b> 2.5 veces la de la Tierra.<br><br><b>Temperatura:</b> Promedio de -145°C.<br><br><b>Órbita y Rotación:</b> Año de 12 años terrestres y día de 10 horas.<br><br><b>Atmósfera:</b> Nubes de amoníaco y la Gran Mancha Roja.<br><br><b>Lunas:</b> Tiene al menos 80 lunas, incluyendo Ío, Europa, Ganimedes y Calisto.<br><br><b>Anillos:</b> Tiene anillos finos.",
+        saturno:
+          "<b>Composición:</b> Gigante gaseoso, principalmente de hidrógeno y helio.<br><br><b>Gravedad:</b> Un poco más de 1 vez la gravedad de la Tierra.<br><br><b>Temperatura:</b> Promedio de -178°C.<br><br><b>Órbita y Rotación:</b> Año de 29,5 años terrestres y día de 10,7 horas.<br><br><b>Atmósfera:</b> Nubes de amoníaco y metano, con una gran tormenta en el hemisferio norte.<br><br><b>Anillos:</b> Famoso por sus grandes anillos formados por hielo y rocas.<br><br><b>Lunas:</b> Más de 80 lunas, destacando Titán, que tiene una atmósfera densa.",
+        urano:
+          "<b>Composición:</b> Gigante helado, principalmente de hidrógeno, helio, agua, amoníaco y metano.<br><br><b>Gravedad:</b> 0.89 veces la de la Tierra.<br><br><b>Temperatura:</b> Promedio de -224°C.<br><br><b>Órbita y Rotación:</b> Año de 84 años terrestres, día de 17.2 horas, y gira casi de lado (eje inclinado 98°).<br><br><b>Atmósfera:</b> Mezcla de metano, amoníaco y agua, que le da un color azul verdoso.<br><br><b>Anillos:</b> Tiene anillos débiles y oscuros.<br><br><b>Lunas:</b> 27 lunas conocidas, destacando Titánia, Oberón y Miranda.",
+        neptuno:
+          "<b>Composición:</b> Gigante gaseoso, principalmente de hidrógeno, helio y agua.<br><br><b>Gravedad:</b> 1.14 veces la de la Tierra.<br><br><b>Temperatura:</b> Promedio de -214°C.<br><br><b>Órbita y Rotación:</b> Año de 165 años terrestres y día de 16 horas.<br><br><b>Atmósfera:</b> Nubes de metano y vientos muy rápidos (2.100 km/h).<br><br><b>Anillos:</b> Tiene anillos finos y oscuros.<br><br><b>Lunas:</b> 14 lunas, destacando Tritón.",
+      };
+
+      function showModal(id) {
+        document.getElementById("modal-title").innerText =
+          document.querySelector(`#${id} h2`).innerText;
+        document.getElementById("modal-description").innerHTML =
+          descriptions[id];
+        document.getElementById("modal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
